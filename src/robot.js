@@ -41,6 +41,8 @@ class Robot {
     meet (otherRobot) {
         if(!(otherRobot instanceof Robot)) throw new Error('Oh my stars and garters just what in the world do you think yer doin\'? That ain\'t no Robot!')
         this._network.push(otherRobot.id)
+        otherRobot._network.push(this.id)
+        return this
     }
     
 }

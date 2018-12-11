@@ -94,8 +94,8 @@ describe('Robot', function () {
       const actual = () => {
         rob.meet(data)
         return rob.network}
-      let dataId = data.id
-      expect(actual()).to.equal(dataId)
+      expect(actual()).to.equal(data.id)
+      expect(data.network).to.equal(rob.id)
     })
   })
 })
